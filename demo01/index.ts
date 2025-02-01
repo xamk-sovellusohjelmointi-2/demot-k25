@@ -9,10 +9,6 @@ app.use(express.static(path.resolve(__dirname, "public")));
 
 
 /*
-Alla olevaa koodia (juureen tehdyn get-pyynnön käsittelijä) ei tarvita, koska Express-sovelluksen sisääntulopiste tai "entry point" on määritelty public-kansiossa olevalla index.html -tiedostolla.
-
-Index-tiedosto on varattu Express-sovelluksissa automaattisena vastauksena silloin, kun sovellus avataan juuritasolla. Jos staattisten tiedostojen kansiota ja index-tiedostoa ei käytä, pitää sovelluksen juureen tehtävän pyynnön käsittelijä silloin määritellä erikseen.
-
 app.get("/", (req : express.Request, res : express.Response) : void => {
     res.send("<h1>Heippa maailma, Henri kävi täällä!</h1>");
 });
