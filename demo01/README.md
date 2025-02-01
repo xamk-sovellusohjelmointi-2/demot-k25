@@ -85,4 +85,3 @@ app.listen(portti, () => {
 - **app.listen(portti, () => { ... });**: Käynnistetään palvelin määritellyllä portilla.
 - **console.log(`Palvelin käynnistyi osoitteeseen: http://localhost:${portti}`);**: Tulostetaan konsoliin viesti, joka ilmoittaa, että palvelin on käynnistynyt ja kuuntelee määritellyllä portilla.
 
-Toivottavasti tämä selitys auttaa! Jos sinulla on lisää kysymyksiä tai tarvitset lisäapua, kerro vain. 😊
