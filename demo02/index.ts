@@ -80,6 +80,6 @@ app.get("/kayttajatiedot", (req: express.Request, res : express.Response) : void
 
 app.listen(portti, () => {
 
-    console.log(`Palvelin käynnistyi porttiin : ${portti}`);    
+    console.log(`Palvelin käynnistyi osoitteeseen: http://localhost:${portti}`);    
 
 });
