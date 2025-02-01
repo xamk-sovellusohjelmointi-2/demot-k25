@@ -6,7 +6,7 @@ Demossa perehdytään Express-sovelluksen perusteisiin.
 - REST API-pyynnöt ja reitit
 - Staattisten tiedostojen kansio
 
-Alla oleva ohjeistus pohjautuu tekoälyltä (Copilot, 2025) saatuun ohjeistukseen.
+Alla oleva ohjeistus pohjautuu osin tekoälyltä (Copilot, 2025) saatuun ohjeistukseen.
 
 ### 1. Node-pakettien tuonti ja määrittelyt
 
