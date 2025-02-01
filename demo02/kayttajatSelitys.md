@@ -1,4 +1,10 @@
-Rajapinta (englanniksi "interface") on ohjelmoinnissa määritelmä, joka kuvaa olion tai luokan ominaisuudet ilman, että se määrittelee niiden toteutusta. Rajapinnat määrittelevät, mitä ominaisuuksia ja metodeja olion tai luokan tulee sisältää, mutta eivät kerro, miten nämä ominaisuudet ja metodit toteutetaan.
+# `Kayttaja.ts`-tietomalli
+
+> Pohjautuu tekoälyn (Copilot, 2025) muodostamaan selitykseen koodista.
+
+Rajapinta (englanniksi "interface") on ohjelmoinnissa määritelmä, joka kuvaa olion tai luokan ominaisuuksia ilman, että se määrittelee niiden toteutusta. Rajapinnat määrittelevät, mitä ominaisuuksia ja metodeja olion tai luokan tulee sisältää, mutta eivät kerro, miten nämä ominaisuudet ja metodit toteutetaan.
+
+TypeScriptissä rajapintaa voidaan käyttää oman TypeScript-tyypin määrittämiseen.
 
 ### Käyttötarkoitus
 
@@ -35,7 +41,7 @@ export interface Kayttaja {
 - **ipOsoite: string**: Käyttäjän IP-osoite.
 - **rekisteroitymisPvm: string**: Käyttäjän rekisteröitymispäivämäärä.
 
-### Miksi Rajapinnat Kirjoitetaan Näin?
+### Miksi rajapinnat kirjoitetaan näin?
 
 Rajapinnat kirjoitetaan näin, koska ne tarjoavat selkeän ja yksinkertaisen tavan määritellä olioiden ja luokkien rakenteen. Tämä auttaa kehittäjiä ymmärtämään, mitä ominaisuuksia ja metodeja tietyn rajapinnan toteuttavan luokan tai olion tulee sisältää. Lisäksi rajapinnat mahdollistavat koodin uudelleenkäytön ja helpottavat testauksen ja ylläpidon prosesseja.
 
@@ -65,8 +71,10 @@ const kayttajat: Kayttaja[] = [
     },
     // Lisää käyttäjiä...
 ];
+
+export default kayttajat;
 ```
-- **const kayttajat: Kayttaja[] = [ ... ];**: Määritellään `kayttajat`-taulukko, joka sisältää useita `Kayttaja`-olioita.
+- ``const kayttajat: Kayttaja[] = [ ... ];``: Määritellään `kayttajat`-taulukko, joka sisältää useita `Kayttaja`-olioita.
 - **id**: Käyttäjän yksilöllinen tunniste.
 - **sukunimi**: Käyttäjän sukunimi.
 - **etunimi**: Käyttäjän etunimi.
@@ -76,16 +84,35 @@ const kayttajat: Kayttaja[] = [
 - **ipOsoite**: Käyttäjän IP-osoite.
 - **rekisteroitymisPvm**: Käyttäjän rekisteröitymispäivämäärä.
 
-Tämä taulukko sisältää esimerkkejä käyttäjistä, joilla on erilaisia tietoja, kuten nimi, sähköposti, käyttäjätunnus, salasana, IP-osoite ja rekisteröitymispäivämäärä.
+Tämä taulukko sisältää esimerkkejä käyttäjistä, joilla on erilaisia tietoja, kuten nimi, sähköposti, käyttäjätunnus, salasana, IP-osoite ja rekisteröitymispäivämäärä. Käyttäjät on generoitu Mockaroo-palvelulla.
+
+### Miten rajapinta ja tietokantataulukko (tässä arrayn sisältämä json-muotoinen data) yhdistetään?
 
 `Kayttaja`-rajapinta ja `kayttajat`-taulukko liittyvät toisiinsa siten, että `Kayttaja`-rajapinta määrittelee, millaisia olioita `kayttajat`-taulukko sisältää. Rajapinta toimii mallina, joka määrittelee, mitä ominaisuuksia jokaisella `kayttajat`-taulukon oliolla tulee olla.
-
-- **Kayttaja-rajapinta**: Määrittelee käyttäjäolion rakenteen, mukaan lukien kaikki tarvittavat kentät, kuten `id`, `sukunimi`, `etunimi`, `sahkoposti`, `kayttajatunnus`, `salasana`, `ipOsoite` ja `rekisteroitymisPvm`.
-- **kayttajat-taulukko**: Sisältää useita `Kayttaja`-olioita, jotka noudattavat `Kayttaja`-rajapinnan määrittelemää rakennetta. Jokainen olio sisältää kaikki rajapinnan määrittelemät kentät.
-
-### Yhteys
 
 - **Rajapinta**: Määrittelee, mitä tietoja käyttäjäolion tulee sisältää.
 - **Taulukko**: Sisältää olioita, jotka noudattavat rajapinnan määrittelemää rakennetta.
 
 Tämä yhteys varmistaa, että kaikki `kayttajat`-taulukon oliot ovat yhdenmukaisia ja sisältävät tarvittavat tiedot. Rajapinnan käyttö tekee koodista luotettavampaa ja helpommin ylläpidettävää, koska se varmistaa, että kaikki oliot noudattavat samaa rakennetta.
+
+### Tiivistelmä
+
+`kayttajat.ts`-tiedosto määrittelee yksittäisen käyttäjän rajapinnan `Kayttaja`, jonka mukaan taulukon käyttäjä-tietueet muotoillaan. Demossa tietokantataulu on korvattu json-muotoista dataa sisältävällä arraylla, jossa yksi tietue on json-objekti.
+
+```json
+// Kaksi json-objektia:
+{
+    "id" : 1,
+    "etunimi" : "Matti",
+    "sukunimi" : "Mallikas"
+    // jne...
+},
+{
+    "id" : 2,
+    "etunimi" : "Maija",
+    "sukunimi" : "Meikäläinen"
+    // jne...
+} // jne...
+```
+
+Tiedoston `Kayttaja`-rajapinta sekä `kayttajat` taulukko kumpikin exportataan vientiä varten Express-sovellukseen.
