@@ -108,8 +108,6 @@ apiOstoksetRouter.get("/", (req : express.Request, res : express.Response, next 
         next(new Virhe());
     }
 
-    
-
 });
 
 export default apiOstoksetRouter;
