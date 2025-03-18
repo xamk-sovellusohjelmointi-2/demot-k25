@@ -12,8 +12,7 @@ Ostosten "tietokanta" on toteutettu demoamismielessä [json-tiedostona](./models
 
 Edellisen demon päälle on uutena asiana rakennettu virhekäsittelijä.
 
-## 2. Kooditiedostojen tarkemmat kuvaukset
-
+## 2. Sisällys
 
 Demon sovellus sisältää viisi ohjelmatiedostoa, jotka ovat demon kannalta tärkeitä. Uusimpana ja oleellisimpana on "5. REST API -virhekäsittelijä".
 

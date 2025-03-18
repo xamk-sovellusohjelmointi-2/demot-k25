@@ -14,7 +14,7 @@ apiOstoksetRouter.delete("/:id", async (req : express.Request, res : express.Res
            where : {
                 id : Number(req.params.id)
             }
-        }))  {
+        }) === 1)  {
         try {
 
             await prisma.ostos.delete({
@@ -41,7 +41,7 @@ apiOstoksetRouter.put("/:id", async (req : express.Request, res : express.Respon
         where : {
             id : Number(req.params.id)
         }
-        })) {
+        }) === 1) {
         if (req.body.tuote?.length > 0 && (req.body.poimittu === true || req.body.poimittu === false)) {
 
             try {
