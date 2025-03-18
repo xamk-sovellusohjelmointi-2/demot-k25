@@ -6,7 +6,7 @@
 
 Kuten Prisman [käyttöönoton ohjeistuksessa](PRISMA-ORM-KAYTTO.md) kerrottiin, Prisma-tietokanta otetaan käyttöön asentamalla `@prisma/client`-apusovellus ja tuomalla se `apiOstokset`-routeen.
 
-```tsx
+```ts
 import { PrismaClient } from '@prisma/client';
 
 const prisma : PrismaClient = new PrismaClient();
@@ -18,7 +18,7 @@ Prisman komentoja voidaan nyt hyödyntää aiemman demon reiteissä muuttamalla 
 
 Tietokannan kaikki ostokset haetaan prisman `findMany`-metodilla. Huomaa, että haku tehdään prisman alla olevaan tauluun (model) `ostos`, joka määritetään Prisman käyttöönoton yhteydessä skeemaan ([schema.prisma](../prisma/schema.prisma)). Huomio myös, että kaikki prisman komennot ovat asynkroonisia, jolloin REST API -reittien nuolifunktiotkin tulee määritellä asynkroonisiksi.
 
-```tsx
+```ts
 apiOstoksetRouter.get("/", async (req : express.Request, res : express.Response, next : express.NextFunction) => {
 
     try {
@@ -41,7 +41,7 @@ Yhden ostoksen hakeminen tapahtui lisäämällä `/api/ostokset/`-reitin perää
 - Jos id:llä ei löydy tuotetta, muodostetaan virhekäsittelijällä uusi virhe statuksella 400.
 - Jos tapahtuu jokin muu virhe, muodostetaan uusi [oletusvirhe](../errors/virhekasittelija.ts) (status 500, odottamaton virhe)
 
-```tsx
+```ts
 apiOstoksetRouter.get("/:id", async (req : express.Request, res : express.Response, next : express.NextFunction) => {
 
      try {
@@ -78,7 +78,7 @@ Tuotteen lisäämisen yhteydessä tarkastetaan ensiksi, onko pyynnön body:ssa t
 
 Jos tuote oli määritelty oikein, suoritetaan prisman ostos-tauluun `create`-komento, johon annetaan parametrina json-muodossa data-objekti, jolle on määritetty tiedot `tuote` ja `poimittu`, kuten tietokannan ostos-taulussakin on. Tuotteen nimi otetaan pyynnön bodysta, kuten myös poimittu-tieto, jos sellainen on annettu. Muuten prisma asettaa oletukseksi `false`. Tämän jälkeen tietokannan kaikki tietueet haetaan uudelleen.
 
-```tsx
+```ts
 piOstoksetRouter.post("/", async (req : express.Request, res : express.Response, next : express.NextFunction) => {
  
       if (req.body.tuote?.length > 0) {
@@ -111,7 +111,7 @@ piOstoksetRouter.post("/", async (req : express.Request, res : express.Response,
 
 Ostoksen poistaminen tehdään samalla tavalla id-reittiparametrin avulla kuin yksittäisen tuotteen hakeminen. Tässäkin tarkistetaan, että id:llä löytyy varmasti vain yksi tuote ennen poiston yritystä. Poistaminen tapahtuu prisman `delete`-komennolla, jonka parametriksi annetaan `where`-lisämääritys, jolla voidaan hakea tietuetta, jossa id on annettu arvo. Tämän jälkeen ostokset haetaan uudelleen tulostamiseksi.
 
-```tsx
+```ts
 apiOstoksetRouter.delete("/:id", async (req : express.Request, res : express.Response, next : express.NextFunction) => {
 
      if (await prisma.ostos.count({
@@ -145,7 +145,7 @@ apiOstoksetRouter.delete("/:id", async (req : express.Request, res : express.Res
 
 Ostoksen muokkaaminen on hyvin samanlainen prosessi kuin yksittäisen ostoksen hakeminen tai ostoksen poistaminen. Tässä tehdään lisätarkistuksena pyynnön bodyyn tarkistus siitä, että kun ostosta muokataan, niin tuotteen uusi nimi annetaan ja poimittu-arvo päivitetään samalla. Jos ehto on tosi, suoritetaan prismalla `update`-komento, jossa haetaan annetulla id:llä oleva ostos, josta päivitetään `tuote` ja `poimittu` -tiedot. Lopuksi tehdään vielä haku tulostusta varten kaikille ostoksille.
 
-```tsx
+```ts
 apiOstoksetRouter.put("/:id", async (req : express.Request, res : express.Response, next : express.NextFunction) => {
 
     if (await prisma.ostos.count({

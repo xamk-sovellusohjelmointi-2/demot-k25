@@ -71,7 +71,7 @@ const prisma : PrismaClient = new PrismaClient();
 
 Nyt Prisma-tietokantaa voidaan hallita ohjelmassa komennolla `prisma`. Esimerkiksi voidaan toteuttaa haku kaikista tietokannan tietueista. Kuten aiemmassakin demossa, tietokannan käsittely tehdään eri REST API -reittien kautta:
 
-```tsx
+```ts
 apiOstoksetRouter.get("/", async (req : express.Requst, res : express.Response, next : express.Nextfunction) => {
     try {
         res.json(await prisma.ostos.findMany());
