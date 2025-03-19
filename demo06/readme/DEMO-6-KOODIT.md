@@ -360,6 +360,10 @@ Kerrataan vielä tähän esimerikiksi uuden tuotteen lisääminen alusta loppuun
 
 ### Kertaus asiakassovelluksen ja palvelimen yhteistoiminnasta kronologisessa järjestyksessä
 
+Käyttäjä avaa sovelluksen:
+
+![alt text](image-6.png)
+
 Käyttäjä kirjoittaa tuotteen nimen tekstikenttään asiakassovelluksessa...
 
 ```tsx
@@ -369,6 +373,8 @@ Käyttäjä kirjoittaa tuotteen nimen tekstikenttään asiakassovelluksessa...
   placeholder="Kirjoita tähän uusi tuote..."
 /> 
 ```
+
+![alt text](image-7.png)
 
 ...joka on osa laajempaa lomaketta...
 
@@ -381,6 +387,8 @@ Käyttäjä kirjoittaa tuotteen nimen tekstikenttään asiakassovelluksessa...
   <List>
 ```
 
+![alt text](image-8.png)
+
 Käyttäjä painaa lisää-painiketta...
 
 ```tsx
@@ -391,6 +399,8 @@ Käyttäjä painaa lisää-painiketta...
   fullWidth={true}
 >Lisää tuote ostoslistaan</Button>
 ```
+
+![alt text](image-9.png)
 
 ...joka lähettää (submit) lomakkeen, eli suorittaa `lisaaTuote`-metodin:
 
@@ -503,3 +513,4 @@ Lopuksi `apiData`-tilamuuttujan päivitetyt ostokset tulostetaan uudelleen React
         </ListItem>                    
 })}
 ```
+![alt text](image-10.png)
