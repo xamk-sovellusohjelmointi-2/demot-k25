@@ -34,7 +34,7 @@ app.use(cors({origin : "http://localhost:3000"}));
 
 // Määritä reitit tähän
 
-app.listen(80, () => {
+app.listen(portti, () => {
     console.log(`Palvelin käynnissä osoitteessa http://localhost:${portti}`);
 });
 ```
