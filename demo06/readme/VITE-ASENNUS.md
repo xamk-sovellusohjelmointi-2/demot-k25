@@ -107,7 +107,7 @@ Alustetaan App-komponentti siten, että tarpeettomat tyylit ja sisällöt on poi
 ```tsx
 import React from 'react';
 
-const App : React.FC = () : React.ReacElement => {
+const App : React.FC = () : React.ReactElement => {
 
   return(
     <>
