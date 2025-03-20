@@ -53,7 +53,7 @@ let token = require("jsonwebtoken").sign({}, "SalausLause_25");
 console.log(token);
 ```
 
-Tällä demossa käytetty token on luotu. Tämä ei siis kuvasta normaalitilannetta, jossa palvelin automaattisesti generoi käyttäjälle tokenin kirjautumisen/sovellukseen yhdistämisen yhteydessä, mutta tässä tokenin ja avaimen luonti halutaan havainnollistaa. Olemme siis valinneet salaisen avaimen "SalausLause_25", josta generoidaan token `require("jsonwebtoken").sign({}, "SalausLause_25")`. Token tulostetaan komentokehotteeseen, josta se on poimittu asiakassovellukseen kovakoodatuksi otsikkotiedoksi (selitetty ylempänä).
+Tällä demossa käytetty token on luotu erikseen omalla ohjelmalla. Tämä ei siis kuvasta normaalitilannetta, jossa palvelin automaattisesti generoi käyttäjälle tokenin kirjautumisen/sovellukseen yhdistämisen yhteydessä, mutta tässä tokenin ja avaimen luonti halutaan havainnollistaa. Olemme siis valinneet salaisen avaimen "SalausLause_25", josta generoidaan token `require("jsonwebtoken").sign({}, "SalausLause_25")`. Token tulostetaan komentokehotteeseen, josta se on poimittu asiakassovellukseen kovakoodatuksi otsikkotiedoksi (selitetty ylempänä).
 
 Voit testata tokenin generointia suorittamalla komentokehotteessa komennon:
 
