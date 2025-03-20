@@ -56,19 +56,13 @@ const App: React.FC = (): React.ReactElement => {
     });
   };
 
-  const apiKutsu = async (
-    metodi?: string,
-    ostos?: Ostos,
-    id?: number
-  ): Promise<void> => {
+  const apiKutsu = async (metodi?: string, ostos?: Ostos, id?: number): Promise<void> => {
     setApiData({
       ...apiData,
       haettu: false,
     });
 
-    let url = id
-      ? `http://localhost:3007/api/ostokset/${id}`
-      : `http://localhost:3007/api/ostokset`;
+    let url = id ? `http://localhost:3007/api/ostokset/${id}` : `http://localhost:3007/api/ostokset`;
     console.log(url);
 
     let asetukset: fetchAsetukset = {
