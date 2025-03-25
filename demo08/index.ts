@@ -10,6 +10,7 @@ const app : express.Application = express();
 
 const portti : number = Number(process.env.PORT) || 3008;
 
+// Erillinen tarkistus, koska kaikkia reittejä ei tarkisteta
 const checkToken = (req : express.Request, res : express.Response, next : express.NextFunction) => {
     try {
 
