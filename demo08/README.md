@@ -8,7 +8,11 @@ Autorisointia voidaan myös ajatella pidemmälle. Tapahtumapaikalla voi olla eri
 
 Edellisessä demossa 7 käytiin autorisointia tarkemmin, eli mihin käyttäjällä on pääsy. Tässä demossa keskitytään enemmän siihen, että kuka pääsee ja minne. Autentikoinnilla varmistetaan käyttäjän oikeudet ja niiden laajuus ja autorisoinnilla annetaan varsinainen avain (JWT token) rajoitettuihin resursseihin.
 
+## Demon idea tiivistetysti
+
 Demossa 8 ostoslistanäkymä on autorisoinnilla rajoitettu näkymä, jonne vain kirjautuneet käyttäjät pääsevät. Sovelluksessa on erikseen kirjautumisnäkymä, jolle ei ole autorisointia, eli sinne kenellä tahansa on pääsy. Käyttäjätunnuksilla kirjautumisen jälkeen (autentikointi), käyttäjällä on oikeus päästä ostoslistan näkymään (autorisointi).
 
 ## Sisällys
 
+### [Käyttäjän kirjautuminen ja autentikointi palvelinsovelluksessa](./readme/KAYTTAJAN-AUTENTIKOINTI.md)
+### [Kirjautuminen asiakassovelluksessa ja pyynnön lähettäminen palvelimelle](./readme/CLIENT-LOGIN.md)

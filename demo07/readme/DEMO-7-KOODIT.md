@@ -138,4 +138,4 @@ app.use((req : express.Request, res : express.Response, next : express.NextFunct
 
 ## 4. Lopuksi
 
-Tässä esiteltiin JWT:n käyttöönotto kovakoodattuna. Seuraavassa demossa katsotaan, miten JWT-tokenia voidaan käyttää käyttäjän varmentamiseen osana sovelluksen toimintaa. Voit vielä kokeilla JWT:n toimintaa muuttamalla tokenista pari merkkiä ja testaamalla sovellusta. Sovelluksen pitäisi toimia niin, että asiakassovellus saa virheilmoituksen virheellisestä tokenista.
+Tässä esiteltiin JWT:n käyttöönotto, jossa token oli kovakoodattu osaksi palvelinsovellusta. Seuraavassa demossa katsotaan, miten JWT-tokenia voidaan käyttää yhdessä käyttäjän varmentamisen kanssa osana sovelluksen toimintaa. Voit vielä kokeilla JWT:n toimintaa muuttamalla tokenista pari merkkiä ja testaamalla sovellusta. Sovelluksen pitäisi toimia niin, että asiakassovellus saa virheilmoituksen virheellisestä tokenista.
