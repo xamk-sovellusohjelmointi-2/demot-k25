@@ -16,7 +16,13 @@ Prisma ORM:stä ja sen käytöstä voit lukea lisää [dokumentaatiosta](https:/
 
     `npx install prisma -D`
 
-3) Seuraavaksi Prisma ORM pitää alustaa projektissa komennolla:
+   Päivitys 10.4.2025
+
+    Prisman uusimmalla versiolla 6.6.0 voi tulla ongelma demon ohjeistuksen kanssa. Näyttäisi siltä, että Prisman käyttöönotto on voinut muuttua tai siinä on bugi, jonka takia asentamalla Prisman viimeisimmän version (6.6.0) komennolla npm install -D prisma tietokannan luominen ei onnistu pelkällä migraatiolla, kuten demon ohjeistuksessa neuvotaan.
+    
+    Helpoin tapa varmistua Prisman toiminnasta on asentaa demoissa käytetty versio 6.3.1. Tämä onnistuu uusiin projekteihin korvaamalla Prisman asennuskomento seuraavasti: npm install -D prisma@6.3.1, joka asentaa Prismasta sen version, jolla demojen mukainen tapa vielä toimii.
+
+4) Seuraavaksi Prisma ORM pitää alustaa projektissa komennolla:
 
     `npx prisma init --datasource-provider sqlite`
     - Yllä olevassa komennossa määritetään samalla tietokannaksi SQLite
