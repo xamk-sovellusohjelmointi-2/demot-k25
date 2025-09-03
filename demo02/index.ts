@@ -77,8 +77,8 @@ app.get("/yhteystiedot/:id", (req: express.Request, res: express.Response): void
 
 });
 
-app.listen(portti, () => {
-
+app.listen(portti, () : void => {
+    
     console.log(`Palvelin käynnistyi osoitteeseen: http://localhost:${portti}`);
 
 });

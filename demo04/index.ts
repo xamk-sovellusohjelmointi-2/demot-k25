@@ -13,7 +13,7 @@ app.use("/api/ostokset", apiOstoksetRouter);
 
 app.use(virhekasittelija);
 
-app.use((req : express.Request, res : express.Response, next : express.NextFunction) => {
+app.use((req : express.Request, res : express.Response, next : express.NextFunction) : void => {
 
     if (!res.headersSent) {
         res.status(404).json({ viesti : "Virheellinen reitti"});
@@ -22,7 +22,7 @@ app.use((req : express.Request, res : express.Response, next : express.NextFunct
     next();
 });
 
-app.listen(portti, () => {
+app.listen(portti, () : void => {
 
     console.log(`Palvelin käynnistyi osoitteeseen: http://localhost:${portti}`);    
 

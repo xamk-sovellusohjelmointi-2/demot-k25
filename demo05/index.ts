@@ -22,7 +22,7 @@ app.use((req : express.Request, res : express.Response, next : express.NextFunct
     next();
 });
 
-app.listen(portti, () => {
+app.listen(portti, () : void => {
 
     console.log(`Palvelin käynnistyi osoitteeseen: http://localhost:${portti}`);    
 

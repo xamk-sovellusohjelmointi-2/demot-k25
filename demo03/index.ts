@@ -10,8 +10,8 @@ app.use(express.static(path.resolve(__dirname, "public")));
 
 app.use("/api/ostokset", apiOstoksetRouter);
 
-app.listen(portti, () => {
+app.listen(portti, () : void => {
 
-    console.log(`Palvelin käynnistyi porttiin : ${portti}`);    
+    console.log(`Palvelin käynnistyi osoitteeseen: http://localhost:${portti}`);    
 
 });
