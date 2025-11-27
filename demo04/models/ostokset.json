@@ -18,5 +18,10 @@
     "id": 4,
     "tuote": "Jäätelöä",
     "poimittu": false
+  },
+  {
+    "id": 5,
+    "tuote": "Banaaneja",
+    "poimittu": false
   }
 ]
