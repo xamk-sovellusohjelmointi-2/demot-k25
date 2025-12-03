@@ -6,7 +6,10 @@ Demossa iso osa koodista perustuu jo aiempiin demoihin, eikä niitä käydä uud
 
 ## Sisällys
 
+### [Uusi vaiheittainen ohjeistus](./walkthrough/README.md)
+
 ### [Vite + React -projektin asentaminen ja alustus](./readme/VITE-ASENNUS.md)
 ### [Material UI -kertaus](./readme/MUI-KERTAUS.md)
 ### [CORS (Cross-Origin Resource Sharing)](./readme/CORS.md)
+
 ### [Demon varsinainen toteutus ja sovellusten yhdistäminen](./readme/DEMO-6-KOODIT.md)
