@@ -14,6 +14,8 @@ Edellisen demon päälle on uutena asiana rakennettu virhekäsittelijä.
 
 ## 2. Sisällys
 
+### [Uusi vaiheittainen ohjeistus](./walkthrough/README.md)
+
 Demon sovellus sisältää viisi ohjelmatiedostoa, jotka ovat demon kannalta tärkeitä. Uusimpana ja oleellisimpana on "5. REST API -virhekäsittelijä".
 
 ### [1. Express-palvelin (index.ts) ->](./readme/Express-palvelin.md)
@@ -25,4 +27,5 @@ Demon sovellus sisältää viisi ohjelmatiedostoa, jotka ovat demon kannalta tä
 ### [4. Ostokset-"tietokanta" (ostokset.json) ->](./readme/Ostokset-tietokanta.md)
 
 ### [5. REST API -virhekäsittelijä (virhekasittelija.ts) ->](./readme/REST-API-virhekäsittelijä.md)
+
 
