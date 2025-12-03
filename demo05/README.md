@@ -6,6 +6,9 @@ Demossa 5 jatketaan ostoslistasovelluksen toteuttamista, mutta tietojen tallenta
 
 ## Sisällys:
 
+### [Uusi vaiheittainen ohjeistus](./walkthrough/README.md)
+
 ### [Prisma ORM asennus ja käyttö](./readme/PRISMA-ORM-KAYTTO.md)
 ### [Tietopaketti tietokannoista](./readme/TIETOKANNAT.MD)
+
 ### [Prisma-tietokannan käyttö apiOstokset-routessa](./readme/PRISMA-OSTOKSET.md)
