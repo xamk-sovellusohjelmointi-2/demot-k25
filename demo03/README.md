@@ -1,5 +1,7 @@
 # Demo 3 - REST API
 
+### [Uusi vaiheittainen ohjeistus](./walkthrough/README.md)
+
 Tämä on demo REST API -palvelinsovelluksesta, jonka tarkoituksena on keskustella muiden sovellusten tai järjestelmien kanssa json-muodossa. REST API on rajapinta, joka mahdollistaa palvelimella/sen taustajärjestelmissä sijaitsevien tietojen lukemisen, lisäämisen, muokkaamisen ja poiston asiakassovelluksella.
 
 Toisin sanottuna REST API on välikäsi, jolla asiakassovellus (eli ihmiskäyttäjä) voi päästä käsiksi kolmansiin palveluihin, jotka sijaitsevat palvelimen/backendin taustalla. Näitä voivat olla tietokannat, muut sovellukset, laitteet jne.
@@ -89,4 +91,5 @@ Varsinainen ostosten käsittely tapahtuu siis lopulta JSON-datasta muodostettuun
 ### haeYksi-metodi
 
 Yhden tuotteen hakemisen metodissa annetaan parametrina id, joka saadaan REST-pyynnön polusta. `haeYksi`-metodi palauttaa joko yksittäisen ostoksen (`Ostos`-interface) tai ei mitään, jos kyseisellä id:llä ei ole ostosta `ostokset.json`-tiedostossa, jolloin palautettava arvo on `undefined`. Tässä pitää huomioida, että jos metodi voi palauttaa useampaa tietotyyppiä, jokainen pitää huomioida metodin TypeScript-tyypityksessä, joka on tuo kaksoispistettä seuraava osa nuolifunktion määrittelyssä `: Ostos | undefined`. `haeYksi` etsii `ostokset`-muuttujan arraysta id:tä vastaavan ostoksen ja palauttaa sen, jos vastaavuus löytyi.
+
 
