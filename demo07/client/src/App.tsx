@@ -69,7 +69,7 @@ const App: React.FC = (): React.ReactElement => {
       method: metodi || "GET",
       headers: {
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDIyMDMzNDh9.0OqTw4sohQE6UdVF8nRAAiMOwNK95mSwPOCbdgLjmgo",
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NjQ4MzkyMDR9.BBDuddeMDJWVyS0oH-NHkdjZ4p5QPpQNjLXaefuTjPE",
       },
     };
 
