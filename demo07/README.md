@@ -16,5 +16,8 @@ JWT:tä käytetään pääasiassa seuraaviin tarkoituksiin:
 
 ## Sisällys:
 
+### [Uusi läpikulku demo 7](./walkthrough/README.md)
+
 ### [JWT:n käyttö demo 7](./readme/DEMO-7-KOODIT.md)
+
 Tässä demossa ei vielä oteta kantaa käyttäjän autentikointiin. Nyt otamme vain JWT:n käyttöön ja määritämme sovellusten välille digitaalisen allekirjoituksen tokenilla, jonka avulla sovellukset (client ja palvelin) voivat kommunikoida keskenään. Ilman JWT-tokenia asiakassovellus ei voi yhdistää palvelimeen.
