@@ -22,7 +22,7 @@ app.use((req : express.Request, res : express.Response, next : express.NextFunct
         next();
 
     } catch (e: any) {
-        res.status(401).json({});
+        res.status(401).json({ viesti : "Virheellinen token"});
     }
 
 });
