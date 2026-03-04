@@ -3,7 +3,7 @@ import path from 'path';
 
 const app : express.Application = express();
 
-const portti : number = Number(process.env.PORT) || 3001;
+const portti: number = Number(process.env.PORT) || 3001;
 
 app.use(express.static(path.resolve(__dirname, "public")));
 
